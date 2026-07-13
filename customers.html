@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optim — Customers</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="customers.html" class="active">Customers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="customers-hero">
+        <span class="eyebrow">Our Customers</span>
+        <h1>Trusted by leading brands</h1>
+        <p>From banks and universities to media houses and clinics — organizations across Rwanda rely on Optim for their printing, design, and branding.</p>
+    </header>
+
+    <section class="customers">
+        <div class="customers-grid">
+            <figure class="customer-tile"><img src="logos/images (2).jpg" alt="Ecobank" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/pesapal-logo.png" alt="Pesapal" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/images (1).jpg" alt="African Leadership University" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/RFI_logo_new.jpeg" alt="Rwanda Forensic Institute" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/images.png" alt="Davis College Akilah" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/images.jpg" alt="Fine FM 93.1" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/logo.png" alt="Radiant Yacu" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/bc6ba.jpg" alt="Rwanda Broadcasting Agency" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/big-size.png" alt="Legacy Clinics" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/REB_Logo.png" alt="Rwanda Education Board" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/ufc-logo.png" alt="Umutanguha Finance" width="320" height="160" loading="lazy" /></figure>
+            <figure class="customer-tile"><img src="logos/cropped-GGR-WEB-LAYOUT-1-02.png" alt="Gasabo Gold Refinery" width="320" height="160" loading="lazy" /></figure>
+        </div>
+    </section>
+
+    <section class="cta-band">
+        <h2>Join the brands that trust Optim</h2>
+        <p>Let's bring your brand to life with superior printing and branding solutions.</p>
+        <a href="contact.html" class="btn btn-cta-light">Become a Customer</a>
+    </section>
+       <!-- Footer -->
+
+     <footer class="footer">
+           
+           <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <p>&copy; <span id="year"></span> Optim digital marketing. All rights reserved.</p>
+        <div class="icons-footer">
+          <a href="https://www.facebook.com/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/optimdigitalm" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </footer>
+      
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+         document.getElementById("year").textContent = new Date().getFullYear();
+        toggle.addEventListener("click", () => links.classList.toggle("open"));
+        links.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") links.classList.remove("open");
+        });
+    </script>
+</body>
+</html>

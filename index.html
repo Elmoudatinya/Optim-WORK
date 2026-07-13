@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optim</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active"><strong>Home</strong></a></li>
+            <li><a href="about.html"><strong>About</strong></a></li>
+            <li><a href="service.html"><strong>Services</strong></a></li>
+            <li><a href="customers.html"><strong>Customers</strong></a></li>
+            <li><a href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-text">
+            <!-- <span class="eyebrow">Printing &middot; Design &middot; Branding</span> -->
+            <h1>Precision in <span class="grad">every pixel</span></h1>
+            <p>Optim is a full-service printing and branding house — from graphic design and large-format printing to laser cutting, engraving and complete brand identities.</p>
+            <div class="hero-actions">
+                <a href="service.html" class="btn btn-primary">Explore Services</a>
+                <a href="contact.html" class="btn btn-ghost btn-ghost-light">Get a Quote</a>
+            </div>
+        </div>
+      
+
+             
+               
+
+
+
+    </section>
+      <footer class="footer">
+           </div>
+           <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <p>&copy; <span id="year"></span> Optim digital marketing. All rights reserved.</p>
+        <div class="icons-footer">
+          <a href="https://www.facebook.com/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/optimdigitalm" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+     
+      </footer>
+    
+
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+        document.getElementById("year").textContent = new Date().getFullYear();
+        toggle.addEventListener("click", () => links.classList.toggle("open"));
+        links.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") links.classList.remove("open");
+        });
+    </script>
+    
+</body>
+</html>

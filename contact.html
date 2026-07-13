@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optim — Contact</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="customers.html">Customers</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+ 
+
+    <header class="contact-hero">
+        <span class="eyebrow">Contact Us</span>
+        <h1>Let's start your project</h1>
+        <p>Have a print, design, or branding job in mind? Reach out directly or send us a message — we'll get back to you quickly.</p>
+    </header>
+
+    <section class="contact">
+        <div class="contact-grid">
+            <!-- Info panel -->
+            <aside class="contact-info">
+                <h2>Get in touch</h2>
+                <p>We're here to help bring your brand to life.</p>
+
+                <ul class="info-list">
+                    <li>
+                        <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+                        <span class="info-detail">
+                            <span class="info-label">Phone</span>
+                            <a href="tel:+250788312643">+250 788470858</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="info-detail">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:optimdigitalmarketingexpert@gmail.com">optimdigitalmarketingexpert@gmail.com</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span class="info-detail">
+                            <span class="info-label">Location</span>
+                            <span>Ikaze House, Remera - kisimenti — 3rd floor - Room 13, Kigali, Rwanda</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="socials">
+                    <a href="https://www.instagram.com/optimdigitalmarkertingexpert_r/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:optimdigitalmarketingexpert@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </aside>
+
+            <!-- Contact form -->
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="field">
+                    <label for="name">Full name <span class="req">*</span></label>
+                    <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="email">Email <span class="req">*</span></label>
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+250 ..." />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="service">Service needed</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service…</option>
+                        <option>Graphic Design</option>
+                        <option>Digital &amp; Offset Printing</option>
+                        <option>UV Printing</option>
+                        <option>Laser Cutting / Engraving</option>
+                        <option>Large-Format Printing</option>
+                        <option>Embroidery &amp; Screen Printing</option>
+                        <option>Branding Services</option>
+                        <option>Promotional Materials</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message <span class="req">*</span></label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project…"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+      <!-- Footer -->
+
+        <footer class="footer">
+           
+           <a href="index.html" class="brand">
+            <img src="logo.png" alt="Optim logo" class="brand-logo" />
+            <span>Optim</span>
+        </a>
+        <p>&copy; <span id="year"></span> Optim digital marketing. All rights reserved.</p>
+        <div class="icons-footer">
+          <a href="https://www.facebook.com/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/optimdigitalm" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/optimdigitalmarkertingexpert_r/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </footer>
+
+
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+         document.getElementById("year").textContent = new Date().getFullYear();
+        toggle.addEventListener("click", () => links.classList.toggle("open"));
+        links.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") links.classList.remove("open");
+        });
+
+        // Contact form: validate + feedback (no backend — swap for your endpoint)
+        const form = document.getElementById("contactForm");
+        const note = document.getElementById("formNote");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                const firstInvalid = form.querySelector(":invalid");
+                if (firstInvalid) firstInvalid.focus();
+                note.className = "form-note error";
+                note.textContent = "Please fill in the required fields correctly.";
+                return;
+            }
+            note.className = "form-note success";
+            note.textContent = "Thanks! Your message has been sent — we'll be in touch shortly.";
+            form.reset();
+        });
+    </script>
+</body>
+</html>
